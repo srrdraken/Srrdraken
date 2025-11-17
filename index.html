@@ -1,114 +1,157 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srr Draken</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SrrDraken - Neon Gamer</title><style>
+    /* ===== RESET ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0a0a0a;
-            color: white;
-        }
+    body {
+        font-family: 'Arial', sans-serif;
+        background: #050006;
+        color: #fff;
+        overflow-x: hidden;
+    }
 
-        header {
-            background: #111;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* ===== NEON GLOW ===== */
+    .neon-red {
+        color: #ff003c;
+        text-shadow: 0 0 8px #ff003c, 0 0 18px #ff003c, 0 0 28px #ff003c;
+    }
 
-        logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #ff0000;
-        }
+    .neon-box {
+        box-shadow: 0 0 12px #ff003c, 0 0 25px #ff003c;
+        border: 1px solid #ff003c;
+    }
 
-        nav a {
-            color: white;
-            margin-left: 20px;
-            text-decoration: none;
-            font-size: 18px;
-        }
+    /* ===== HEADER ===== */
+    header {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(6px);
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(255, 0, 60, 0.4);
+    }
 
-        nav a:hover {
-            color: red;
-        }
+    header h1 {
+        font-size: 32px;
+        font-weight: bold;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: url('https://images.unsplash.com/photo-1655720832263-e8dab2c0902f?auto=format&fit=crop&w=1100&q=80') 
-                        center/cover no-repeat;
-        }
+    nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        transition: 0.2s;
+    }
 
-        .hero h1 {
-            font-size: 50px;
-            text-shadow: 2px 2px 6px black;
-        }
+    nav a:hover {
+        color: #ff003c;
+        text-shadow: 0 0 8px #ff003c;
+    }
 
-        .hero p {
-            font-size: 22px;
-            margin-top: 10px;
-        }
+    /* ===== HERO SECTION ===== */
+    .hero {
+        height: 100vh;
+        width: 100%;
+        background: url('https://images.unsplash.com/photo-1618336753974-aae8e31f82d3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+    }
 
-        .hero button {
-            margin-top: 20px;
-            padding: 12px 30px;
-            font-size: 18px;
-            border: none;
-            background: red;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+    .hero h2 {
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-        .hero button:hover {
-            background: darkred;
-        }
+    .hero p {
+        font-size: 22px;
+        max-width: 700px;
+    }
 
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
+    .btn {
+        margin-top: 30px;
+        padding: 14px 32px;
+        font-size: 20px;
+        border: none;
+        border-radius: 6px;
+        background: #ff003c;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s;
+    }
 
-        footer {
-            background: #111;
-            padding: 10px;
-            text-align: center;
-            margin-top: 30px;
-        }
-    </style>
-</head>
+    .btn:hover {
+        background: #d40034;
+        box-shadow: 0 0 15px #ff003c;
+    }
 
-<body>
+    /* ===== SOBRE ===== */
+    section {
+        padding: 100px 40px;
+        text-align: center;
+    }
 
-    <header>
-        <logo>SrrDraken</logo>
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
-        </nav>
-    </header>
+    .sobre-box {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 10px;
+    }
 
-    <div class="hero">
-        <h1>Bem-vindo ao Mundo Srr Draken</h1>
-        <p>Poder, estilo e tecnologia em um só lugar.</p>
-        <button>Explorar</button>
+    /* ===== FOOTER ===== */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        border-top: 1px solid rgba(255, 0, 60, 0.4);
+    }
+</style>
+
+</head><body><header class="neon-box">
+    <h1 class="neon-red">SrrDraken</h1>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <h2 class="neon-red">Bem-vindo ao Mundo Srr Draken</h2>
+    <p>Poder, design gamer e energia neon em um único portal digital.</p>
+    <button class="btn">Explorar</button>
+</section>
+
+<section id="sobre">
+    <div class="sobre-box neon-box">
+        <h2 class="neon-red">Sobre o Projeto</h2>
+        <p>
+            Este site foi criado especialmente para você, trazendo uma estética gamer e neon vermelho
+            com efeitos visuais modernos e uma vibe sombria e tecnológica.
+        </p>
     </div>
+</section>
 
-    <section>
-        <h2>Sobre o Projeto</h2>
-        <p>Este é o site oficial criado para você, Srr Draken!</p>
-    </section>
-
-    <footer>
-        © 2025 - Srr Draken. Todos os direitos reservados.
-    </footer>
+<footer>
+    © 2025 — SrrDraken. Todos os direitos reservados.
+</footer>
 
 </body>
 </html>
